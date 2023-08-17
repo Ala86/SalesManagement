@@ -1,0 +1,1269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E13FDABB-5B14-49DA-9417-6D0ABE6E2113}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NACCUGSoft_Online</RootNamespace>
+    <AssemblyName>NACCUGSoft_Online</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.30930.28736, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.Configuration, Version=3.1.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.3.1.4\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=3.1.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.3.1.4\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.FileExtensions, Version=3.1.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.FileExtensions.3.1.4\lib\netstandard2.0\Microsoft.Extensions.Configuration.FileExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Json, Version=3.1.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Json.3.1.4\lib\netstandard2.0\Microsoft.Extensions.Configuration.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=3.1.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Abstractions.3.1.4\lib\netstandard2.0\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Physical, Version=3.1.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Physical.3.1.4\lib\netstandard2.0\Microsoft.Extensions.FileProviders.Physical.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileSystemGlobbing, Version=3.1.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileSystemGlobbing.3.1.4\lib\netstandard2.0\Microsoft.Extensions.FileSystemGlobbing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=3.1.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.3.1.4\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=3.1.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.3.1.4\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=1.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.1.1.2\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.1.2\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestClient, Version=3.1024.23771.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestClient.3.1024.23771\lib\net472\RestClient.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.6.10.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.6.10\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.4.7.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.1.2\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.4.7.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.4.7.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.4.7.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Text.Encodings.Web, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.5.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.5.0.1\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Twilio, Version=5.46.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Twilio.5.46.0\lib\net451\Twilio.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Twilio.AspNet.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Twilio.AspNet.Common.5.33.1\lib\net45\Twilio.AspNet.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Twilio.AspNet.Mvc, Version=5.33.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Twilio.AspNet.Mvc.5.33.1\lib\net451\Twilio.AspNet.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\AddPhoneNumber.aspx" />
+    <Content Include="Account\Confirm.aspx" />
+    <Content Include="Account\Forgot.aspx" />
+    <Content Include="Account\Lockout.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\ManageLogins.aspx" />
+    <Content Include="Account\ManagePassword.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Account\ResetPassword.aspx" />
+    <Content Include="Account\ResetPasswordConfirmation.aspx" />
+    <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
+    <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="AGM_Logo_2.jpg" />
+    <Content Include="AGM_Logo_3.jpg" />
+    <Content Include="airtimeUI.aspx" />
+    <Content Include="AssetRegisterReport.aspx" />
+    <Content Include="BalanceEnquiryUI.aspx" />
+    <Content Include="BMJLogo.jpg" />
+    <Content Include="BMJLogos.jpg" />
+    <Content Include="BMJLogoss.jpg" />
+    <Content Include="CashPower.aspx" />
+    <Content Include="ChangePassword.aspx" />
+    <Content Include="ChangePinCode.aspx" />
+    <Content Include="ConfirmLoanApplied.aspx" />
+    <Content Include="ConfirmSavingsAdjustment.aspx" />
+    <Content Include="ConfirmVisaRequest.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="css\simple-sidebar.css" />
+    <Content Include="CUDashboard.aspx" />
+    <Content Include="CUOnlineRegistration.aspx" />
+    <Content Include="CUOnlineVisaApplication.aspx" />
+    <Content Include="CURequestforclosure.aspx" />
+    <Content Include="CUSavingsAdjustment.aspx" />
+    <Content Include="CustomerReport.aspx" />
+    <Content Include="Dashboard2.aspx" />
+    <Content Include="dashboard3.aspx" />
+    <Content Include="DashboardUI.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Account\Web.config" />
+    <Content Include="FRMREPInvoice.aspx" />
+    <Content Include="GenerateNewPin.aspx" />
+    <Content Include="InvoiceForm.aspx" />
+    <Content Include="InvoiceListing.aspx" />
+    <Content Include="JournalCreation.aspx" />
+    <Content Include="JournalExit.aspx" />
+    <Content Include="JournalPosting.aspx" />
+    <Content Include="masterpage.Master" />
+    <Content Include="Content\Site.less" />
+    <Content Include="MiniStatementUI.aspx" />
+    <Content Include="NewDashboard.aspx" />
+    <Content Include="NewLoginUI.aspx" />
+    <Content Include="NewMenuUI.aspx" />
+    <Content Include="NewOnlineRegistrationUI.aspx" />
+    <Content Include="NewRazarpage.cshtml" />
+    <Content Include="Content\Login.less" />
+    <Content Include="ProductReport.aspx" />
+    <Content Include="ReceiptListing.aspx" />
+    <Content Include="RegistrationUIEdit.aspx" />
+    <Content Include="RegistrationUIEx.aspx" />
+    <Content Include="RegistrationUIInd.aspx" />
+    <Content Include="REPInvoice.aspx" />
+    <Content Include="Sales-and-Inventory-System-.jpg" />
+    <Content Include="SupplierReport.aspx" />
+    <Content Include="TransactionEnquiry.aspx" />
+    <Content Include="TransactionsReport.aspx" />
+    <Content Include="payment.aspx" />
+    <Content Include="MemberDataSet.xsc">
+      <DependentUpon>MemberDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="InvoiceDataSet.xsc">
+      <DependentUpon>InvoiceDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="DatasetReceiptReport.xsc">
+      <DependentUpon>DatasetReceiptReport.xsd</DependentUpon>
+    </Content>
+    <Content Include="CustomerDetailsDataSet.xsc">
+      <DependentUpon>CustomerDetailsDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="AssetRepDataSet.xsc">
+      <DependentUpon>AssetRepDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="WebForm1.aspx" />
+    <None Include="AssetRepDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AssetRepDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="AssetRepDataSet.xss">
+      <DependentUpon>AssetRepDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="CustomerDetailsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerDetailsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="CustomerDetailsDataSet.xss">
+      <DependentUpon>CustomerDetailsDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="DatasetReceiptReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatasetReceiptReport.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DatasetReceiptReport.xss">
+      <DependentUpon>DatasetReceiptReport.xsd</DependentUpon>
+    </Content>
+    <None Include="InvoiceDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InvoiceDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="InvoiceDataSet.xss">
+      <DependentUpon>InvoiceDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="MemberDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MemberDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="MemberDataSet.xss">
+      <DependentUpon>MemberDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="ProductReportDataSet.xsc">
+      <DependentUpon>ProductReportDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="ProductReportDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductReportDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="ProductReportDataSet.xss">
+      <DependentUpon>ProductReportDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\Ala.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="gtucculogoc.jpe" />
+    <Content Include="LoginScreen.aspx" />
+    <Content Include="MainMenu.aspx" />
+    <Content Include="naccuglogo.jpg" />
+    <Content Include="OnlineBalanceEnquiry.aspx" />
+    <Content Include="OnlineLoanApplication.aspx" />
+    <Content Include="OnlineMiniStatement.aspx" />
+    <Content Include="OnlineMiniStatementLatest.aspx" />
+    <Content Include="OnlineRegistration.aspx" />
+    <Content Include="OnlineRequestForClose.aspx" />
+    <Content Include="OnlineSavingsAdjustment.aspx" />
+    <Content Include="OnlineVisaRequest.aspx" />
+    <Content Include="Online_LoanApplication.aspx" />
+    <Content Include="RegistrationUI.aspx" />
+    <Content Include="createuser.aspx" />
+    <Content Include="SavingAdjustmentUI.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Site.Master" />
+    <Content Include="TranferFormUI.aspx" />
+    <Content Include="UserDashboard.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="VisaRequestUI.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="StatementDataSet.xsc">
+      <DependentUpon>StatementDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="SPMemTranEnquiryData.xsc">
+      <DependentUpon>SPMemTranEnquiryData.xsd</DependentUpon>
+    </Content>
+    <None Include="SPMemTranEnquiryData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SPMemTranEnquiryData.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="SPMemTranEnquiryData.xss">
+      <DependentUpon>SPMemTranEnquiryData.xsd</DependentUpon>
+    </Content>
+    <None Include="StatementDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StatementDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="StatementDataSet.xss">
+      <DependentUpon>StatementDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="SupplierRepDataSet.xsc">
+      <DependentUpon>SupplierRepDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="SupplierRepDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SupplierRepDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="SupplierRepDataSet.xss">
+      <DependentUpon>SupplierRepDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\AddPhoneNumber.aspx.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\AddPhoneNumber.aspx.designer.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.designer.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.designer.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.designer.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.designer.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.designer.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.designer.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="airtimeUI.aspx.cs">
+      <DependentUpon>airtimeUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="airtimeUI.aspx.designer.cs">
+      <DependentUpon>airtimeUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="AssetRegisterReport.aspx.cs">
+      <DependentUpon>AssetRegisterReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AssetRegisterReport.aspx.designer.cs">
+      <DependentUpon>AssetRegisterReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AssetRepDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssetRepDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AssetUpdate.cs" />
+    <Compile Include="BalanceEnquiryUI.aspx.cs">
+      <DependentUpon>BalanceEnquiryUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BalanceEnquiryUI.aspx.designer.cs">
+      <DependentUpon>BalanceEnquiryUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CashPower.aspx.cs">
+      <DependentUpon>CashPower.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CashPower.aspx.designer.cs">
+      <DependentUpon>CashPower.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CashReceipt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CashReceipt.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePinCode.aspx.cs">
+      <DependentUpon>ChangePinCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePinCode.aspx.designer.cs">
+      <DependentUpon>ChangePinCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="ConfirmLoanApplied.aspx.cs">
+      <DependentUpon>ConfirmLoanApplied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmLoanApplied.aspx.designer.cs">
+      <DependentUpon>ConfirmLoanApplied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmSavingsAdjustment.aspx.cs">
+      <DependentUpon>ConfirmSavingsAdjustment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmSavingsAdjustment.aspx.designer.cs">
+      <DependentUpon>ConfirmSavingsAdjustment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmVisaRequest.aspx.cs">
+      <DependentUpon>ConfirmVisaRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmVisaRequest.aspx.designer.cs">
+      <DependentUpon>ConfirmVisaRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CRPStatement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRPStatement.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="CryAssetRep.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CryAssetRep.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="CryCustomerDetails.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CryCustomerDetails.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="CryInvoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CryInvoice.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="CryProductReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CryProductReport.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="CrySupplierRep.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrySupplierRep.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="CryTransactionReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CryTransactionReport.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="CUDashboard.aspx.cs">
+      <DependentUpon>CUDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CUDashboard.aspx.designer.cs">
+      <DependentUpon>CUDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CUOnlineRegistration.aspx.cs">
+      <DependentUpon>CUOnlineRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CUOnlineRegistration.aspx.designer.cs">
+      <DependentUpon>CUOnlineRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CUOnlineVisaApplication.aspx.cs">
+      <DependentUpon>CUOnlineVisaApplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CUOnlineVisaApplication.aspx.designer.cs">
+      <DependentUpon>CUOnlineVisaApplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CURequestforclosure.aspx.cs">
+      <DependentUpon>CURequestforclosure.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CURequestforclosure.aspx.designer.cs">
+      <DependentUpon>CURequestforclosure.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CUSavingsAdjustment.aspx.cs">
+      <DependentUpon>CUSavingsAdjustment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CUSavingsAdjustment.aspx.designer.cs">
+      <DependentUpon>CUSavingsAdjustment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerDetailsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerDetailsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerReport.aspx.cs">
+      <DependentUpon>CustomerReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerReport.aspx.designer.cs">
+      <DependentUpon>CustomerReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerUpdate.cs" />
+    <Compile Include="Dashboard2.aspx.cs">
+      <DependentUpon>Dashboard2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard2.aspx.designer.cs">
+      <DependentUpon>Dashboard2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard3.aspx.cs">
+      <DependentUpon>dashboard3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard3.aspx.designer.cs">
+      <DependentUpon>dashboard3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardUI.aspx.cs">
+      <DependentUpon>DashboardUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardUI.aspx.designer.cs">
+      <DependentUpon>DashboardUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatasetReceiptReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatasetReceiptReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRMREPInvoice.aspx.cs">
+      <DependentUpon>FRMREPInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRMREPInvoice.aspx.designer.cs">
+      <DependentUpon>FRMREPInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GenerateNewPin.aspx.cs">
+      <DependentUpon>GenerateNewPin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GenerateNewPin.aspx.designer.cs">
+      <DependentUpon>GenerateNewPin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoiceDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceForm.aspx.cs">
+      <DependentUpon>InvoiceForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceForm.aspx.designer.cs">
+      <DependentUpon>InvoiceForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceListing.aspx.cs">
+      <DependentUpon>InvoiceListing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceListing.aspx.designer.cs">
+      <DependentUpon>InvoiceListing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceTransaction.cs" />
+    <Compile Include="ISmsService.cs" />
+    <Compile Include="JournalCreation.aspx.cs">
+      <DependentUpon>JournalCreation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JournalCreation.aspx.designer.cs">
+      <DependentUpon>JournalCreation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JournalExit.aspx.cs">
+      <DependentUpon>JournalExit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JournalExit.aspx.designer.cs">
+      <DependentUpon>JournalExit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JournalPosting.aspx.cs">
+      <DependentUpon>JournalPosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JournalPosting.aspx.designer.cs">
+      <DependentUpon>JournalPosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JournalUpdate.cs" />
+    <Compile Include="LoginScreen.aspx.cs">
+      <DependentUpon>LoginScreen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginScreen.aspx.designer.cs">
+      <DependentUpon>LoginScreen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.aspx.cs">
+      <DependentUpon>MainMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.aspx.designer.cs">
+      <DependentUpon>MainMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="masterpage.Master.cs">
+      <DependentUpon>masterpage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="masterpage.Master.designer.cs">
+      <DependentUpon>masterpage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MemberDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MemberDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MemberReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MemberReport.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="MiniStatementUI.aspx.cs">
+      <DependentUpon>MiniStatementUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiniStatementUI.aspx.designer.cs">
+      <DependentUpon>MiniStatementUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="NewDashboard.aspx.cs">
+      <DependentUpon>NewDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewDashboard.aspx.designer.cs">
+      <DependentUpon>NewDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewLoginUI.aspx.cs">
+      <DependentUpon>NewLoginUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewLoginUI.aspx.designer.cs">
+      <DependentUpon>NewLoginUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewMenuUI.aspx.cs">
+      <DependentUpon>NewMenuUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewMenuUI.aspx.designer.cs">
+      <DependentUpon>NewMenuUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewOnlineRegistrationUI.aspx.cs">
+      <DependentUpon>NewOnlineRegistrationUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewOnlineRegistrationUI.aspx.designer.cs">
+      <DependentUpon>NewOnlineRegistrationUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineBalanceEnquiry.aspx.cs">
+      <DependentUpon>OnlineBalanceEnquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineBalanceEnquiry.aspx.designer.cs">
+      <DependentUpon>OnlineBalanceEnquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineLoanApplication.aspx.cs">
+      <DependentUpon>OnlineLoanApplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineLoanApplication.aspx.designer.cs">
+      <DependentUpon>OnlineLoanApplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineMiniStatement.aspx.cs">
+      <DependentUpon>OnlineMiniStatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineMiniStatement.aspx.designer.cs">
+      <DependentUpon>OnlineMiniStatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineMiniStatementLatest.aspx.cs">
+      <DependentUpon>OnlineMiniStatementLatest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineMiniStatementLatest.aspx.designer.cs">
+      <DependentUpon>OnlineMiniStatementLatest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineRegistration.aspx.cs">
+      <DependentUpon>OnlineRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineRegistration.aspx.designer.cs">
+      <DependentUpon>OnlineRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineRequestForClose.aspx.cs">
+      <DependentUpon>OnlineRequestForClose.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineRequestForClose.aspx.designer.cs">
+      <DependentUpon>OnlineRequestForClose.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineSavingsAdjustment.aspx.cs">
+      <DependentUpon>OnlineSavingsAdjustment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineSavingsAdjustment.aspx.designer.cs">
+      <DependentUpon>OnlineSavingsAdjustment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineVisaRequest.aspx.cs">
+      <DependentUpon>OnlineVisaRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineVisaRequest.aspx.designer.cs">
+      <DependentUpon>OnlineVisaRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Online_LoanApplication.aspx.cs">
+      <DependentUpon>Online_LoanApplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Online_LoanApplication.aspx.designer.cs">
+      <DependentUpon>Online_LoanApplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductReport.aspx.cs">
+      <DependentUpon>ProductReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductReport.aspx.designer.cs">
+      <DependentUpon>ProductReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductReportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReceiptListing.aspx.cs">
+      <DependentUpon>ReceiptListing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiptListing.aspx.designer.cs">
+      <DependentUpon>ReceiptListing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationUI.aspx.cs">
+      <DependentUpon>RegistrationUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationUI.aspx.designer.cs">
+      <DependentUpon>RegistrationUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationUIEdit.aspx.cs">
+      <DependentUpon>RegistrationUIEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationUIEdit.aspx.designer.cs">
+      <DependentUpon>RegistrationUIEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationUIEx.aspx.cs">
+      <DependentUpon>RegistrationUIEx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationUIEx.aspx.designer.cs">
+      <DependentUpon>RegistrationUIEx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationUIInd.aspx.cs">
+      <DependentUpon>RegistrationUIInd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationUIInd.aspx.designer.cs">
+      <DependentUpon>RegistrationUIInd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REPInvoice.aspx.cs">
+      <DependentUpon>REPInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REPInvoice.aspx.designer.cs">
+      <DependentUpon>REPInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="createuser.aspx.cs">
+      <DependentUpon>createuser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="createuser.aspx.designer.cs">
+      <DependentUpon>createuser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SavingAdjustmentUI.aspx.cs">
+      <DependentUpon>SavingAdjustmentUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SavingAdjustmentUI.aspx.designer.cs">
+      <DependentUpon>SavingAdjustmentUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="sms.cs" />
+    <Compile Include="SPMemTranEnquiryData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPMemTranEnquiryData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="StatementDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StatementDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StockUpdate.cs" />
+    <Compile Include="SupplierRepDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupplierRepDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierReport.aspx.cs">
+      <DependentUpon>SupplierReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierReport.aspx.designer.cs">
+      <DependentUpon>SupplierReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierUpdate.cs" />
+    <Compile Include="TranferFormUI.aspx.cs">
+      <DependentUpon>TranferFormUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TranferFormUI.aspx.designer.cs">
+      <DependentUpon>TranferFormUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionEnquiry.aspx.cs">
+      <DependentUpon>TransactionEnquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionEnquiry.aspx.designer.cs">
+      <DependentUpon>TransactionEnquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionsReport.aspx.cs">
+      <DependentUpon>TransactionsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionsReport.aspx.designer.cs">
+      <DependentUpon>TransactionsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrialBalance.cs" />
+    <Compile Include="TwilioSettings..cs" />
+    <Compile Include="TwilioSmsService.cs" />
+    <Compile Include="twilio_sms.cs" />
+    <Compile Include="UserDashboard.aspx.cs">
+      <DependentUpon>UserDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDashboard.aspx.designer.cs">
+      <DependentUpon>UserDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersUpdate.cs" />
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="VisaRequestUI.aspx.cs">
+      <DependentUpon>VisaRequestUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VisaRequestUI.aspx.designer.cs">
+      <DependentUpon>VisaRequestUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="payment.aspx.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="payment.aspx.designer.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Views\Ala\" />
+    <Folder Include="Views\Default\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Views\SmsControllers\" />
+    <Folder Include="Views\SmsProject\" />
+    <Folder Include="Views\Sms\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CashReceipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CashReceipt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRPStatement.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRPStatement.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CryAssetRep.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CryAssetRep.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CryCustomerDetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CryCustomerDetails.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CryInvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CryInvoice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CryProductReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CryProductReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrySupplierRep.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrySupplierRep.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CryTransactionReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CryTransactionReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MemberReport.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>26530</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:26530/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

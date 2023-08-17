@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterpage.master.cs" Inherits="NACCUGSoft_Online.masterpage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            height: 670px;
+        }
+        .auto-style2 {
+            height: 123px;
+            width: 1337px;
+            background-color: #FFFF00;
+        }
+        .auto-style4 {
+            height: 85px;
+            width: 1337px;
+            background-color: #CCFF33;
+        }
+        .auto-style5 {
+            height: 545px;
+            width: 1337px;
+        }
+        .auto-style6 {
+            height: 123px;
+            width: 1337px;
+            background-color: #66FF33;
+        }
+        .auto-style7 {
+            position: absolute;
+            top: 70px;
+            left: 486px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+               
+            <table border="1" class="auto-style1">
+                <tr>
+                    <td class="auto-style6">
+                        <asp:Label ID="Label1" runat="server" CssClass="auto-style7" Font-Bold="True" Font-Size="Larger" Text="NACCUGSoft Online"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style4">
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/OnlineRegistration.aspx">Registration Online</asp:HyperLink>
+&nbsp; │&nbsp;&nbsp;
+                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/RegistrationUI.aspx">Loan Application Online</asp:HyperLink>
+&nbsp; │&nbsp;
+                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/VisaRequestUI.aspx">Visa Request Statement</asp:HyperLink>
+&nbsp; │&nbsp;
+                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/SavingAdjustmentUI.aspx">Savings Adjustment</asp:HyperLink>
+&nbsp; │&nbsp;
+                        <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/RequestForClosureUI.aspx">Request For Closure</asp:HyperLink>
+&nbsp; │&nbsp;
+                        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/OnlineMiniStatementLatest.aspx">Online Statement</asp:HyperLink>
+&nbsp; │ Balance Enquiry</td>
+                </tr>
+                <tr>
+                    <td class="auto-style5">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2"></td>
+                </tr>
+            </table>        
+    
+    </div>
+    </form>
+</body>
+</html>

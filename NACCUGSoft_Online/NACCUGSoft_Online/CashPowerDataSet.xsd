@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CashPowerDataSet" targetNamespace="http://tempuri.org/CashPowerDataSet.xsd" xmlns:mstns="http://tempuri.org/CashPowerDataSet.xsd" xmlns="http://tempuri.org/CashPowerDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CashPowerDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CashPowerDataSet" msprop:Generator_UserDSName="CashPowerDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CashPowerDataTable" msprop:Generator_TableClassName="CashPowerDataTableDataTable" msprop:Generator_TableVarName="tableCashPowerDataTable" msprop:Generator_TablePropName="CashPowerDataTable" msprop:Generator_RowDeletingName="CashPowerDataTableRowDeleting" msprop:Generator_RowChangingName="CashPowerDataTableRowChanging" msprop:Generator_RowEvHandlerName="CashPowerDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="CashPowerDataTableRowDeleted" msprop:Generator_UserTableName="CashPowerDataTable" msprop:Generator_RowChangedName="CashPowerDataTableRowChanged" msprop:Generator_RowEvArgName="CashPowerDataTableRowChangeEvent" msprop:Generator_RowClassName="CashPowerDataTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nMeterNo" msprop:Generator_ColumnVarNameInTable="columnnMeterNo" msprop:Generator_ColumnPropNameInRow="nMeterNo" msprop:Generator_ColumnPropNameInTable="nMeterNoColumn" msprop:Generator_UserColumnName="nMeterNo" type="xs:string" minOccurs="0" />
+              <xs:element name="cClient" msprop:Generator_ColumnVarNameInTable="columncClient" msprop:Generator_ColumnPropNameInRow="cClient" msprop:Generator_ColumnPropNameInTable="cClientColumn" msprop:Generator_UserColumnName="cClient" type="xs:string" minOccurs="0" />
+              <xs:element name="nAmount" msprop:Generator_ColumnVarNameInTable="columnnAmount" msprop:Generator_ColumnPropNameInRow="nAmount" msprop:Generator_ColumnPropNameInTable="nAmountColumn" msprop:Generator_UserColumnName="nAmount" type="xs:string" minOccurs="0" />
+              <xs:element name="cToken" msprop:Generator_ColumnVarNameInTable="columncToken" msprop:Generator_ColumnPropNameInRow="cToken" msprop:Generator_ColumnPropNameInTable="cTokenColumn" msprop:Generator_UserColumnName="cToken" type="xs:string" minOccurs="0" />
+              <xs:element name="cReceiptNo" msprop:Generator_ColumnVarNameInTable="columncReceiptNo" msprop:Generator_ColumnPropNameInRow="cReceiptNo" msprop:Generator_ColumnPropNameInTable="cReceiptNoColumn" msprop:Generator_UserColumnName="cReceiptNo" type="xs:string" minOccurs="0" />
+              <xs:element name="cKwh" msprop:Generator_ColumnVarNameInTable="columncKwh" msprop:Generator_ColumnPropNameInRow="cKwh" msprop:Generator_ColumnPropNameInTable="cKwhColumn" msprop:Generator_UserColumnName="cKwh" type="xs:string" minOccurs="0" />
+              <xs:element name="cFee" msprop:Generator_ColumnVarNameInTable="columncFee" msprop:Generator_ColumnPropNameInRow="cFee" msprop:Generator_ColumnPropNameInTable="cFeeColumn" msprop:Generator_UserColumnName="cFee" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
